@@ -164,3 +164,67 @@ body {
 .main-button:hover {
 	transform: scale(1.05);
 }
+
+/*================ CARD ================*/
+.card-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	text-align: center;
+
+	margin: 2rem 0;
+	padding: 0 3rem;
+
+	user-select: none;
+}
+
+.card {
+	text-align: center;
+
+	margin: 0 1rem;
+	padding: 2rem;
+
+	max-width: 10rem;
+
+	background-color: var(--strong-blue);
+	border-radius: 1rem;
+	color: white;
+	cursor: pointer;
+	font-weight: 600;
+
+	transition: all 300ms;
+}
+
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 5px 5px 10px black;
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 1rem;
+
+	color: white;
+	font-size: 2rem;
+	text-transform: uppercase;
+
+	transition: all 300ms;
+}
+
+.card-icon {
+	margin-right: 0.3rem;
+
+	width: 2rem;
+
+	font-weight: 100;
+
+}
+
+.card:hover .card-header {
+	transform: translateY(-5px);
+}
