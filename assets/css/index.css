@@ -93,3 +93,74 @@ body {
 .menu-item:hover {
 	color: var(--cute-green);
 }
+
+/*================ MAIN ================*/
+.main {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 1rem;
+
+	height: 22rem;
+
+	background-color: var(--light-blue);
+	/* background-image: url("../../assets/images/banner.png"); */
+	background-position: center;
+	background-size: cover;
+}
+
+.main-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-img {
+	width: 300px
+}
+
+.main-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 5rem;
+}
+
+.main-title {
+	margin-bottom: 1rem;
+	
+	font-weight: 100;
+	font-size: 3.5rem;
+	color: var(--strong-blue);
+}
+
+.main-title .span {
+	font-weight: 700;
+}
+
+.main-button {
+
+	padding: 0.7rem 0.9rem;
+
+	background-color: var(--strong-blue);
+	border-radius: 0.6rem;
+	border: none;
+	color: white;
+	
+	width: 100%;
+
+	font-size: 1.2rem;
+	font-weight: 200;
+
+	cursor: pointer;
+	outline: none;
+
+	transition: transform 300ms;
+}
+
+.main-button:hover {
+	transform: scale(1.05);
+}
