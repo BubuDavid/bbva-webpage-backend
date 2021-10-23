@@ -1,0 +1,95 @@
+/*================ HTML RESET ================*/
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Advent Pro';
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--light-blue);
+
+}
+
+/*================ VARIABLES ================*/
+:root {
+	--bright-blue: #0099ff;
+	--strong-blue: #004481;
+	--medium-blue: #65cbfb;
+	--light-blue : #cbeaff;
+	--cute-green : #1FBAE4;
+	--light-green: #6dcbe6;
+
+	--header-height: 10rem;
+}
+
+/*================ SCROLLBAR ================*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--light-green);
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--cute-green);
+}
+
+
+/*================ GENERAL ================*/
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 2rem;
+}
+
+.span {
+	font-weight: 600;
+}
+
+/*================ HEADER ================*/
+.header {
+	display: flex;
+	align-items: center;
+
+	padding: 0 20%;
+
+	height: var(--header-height);
+
+	background-color: var(--strong-blue);
+}
+
+.header-logo {
+	height: 60%;
+	cursor: pointer;
+}
+
+.header-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-left: auto;
+
+	list-style-type: none;
+}
+
+.menu-item {
+	margin: 0 1rem;
+
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 2rem;
+	text-decoration: none;
+
+	transition: color 300ms ease-out;
+}
+
+.menu-item:hover {
+	color: var(--cute-green);
+}
