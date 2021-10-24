@@ -1,11 +1,13 @@
 from api_functions import consume_api
+from flask_cors import CORS
 
 from config import create_app
-import requests
 
 from flask import render_template
 
 app = create_app()
+CORS(app)
+
 
 countries = [
 	{
