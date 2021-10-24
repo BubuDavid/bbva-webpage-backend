@@ -13,15 +13,16 @@ async function createCards(apiURL) {
 	responseJson = await getCountries(apiURL)
 	countriesInfo = responseJson.countries
 	countriesInfo.forEach(country => {
-		card = document.createElement('div')
+		card = document.createElement('a')
 		card.className = "card"
 		card.innerHTML = `
 			<div class="card-header">
-				<img src="${country.flag}" alt="${country.name} Flag" class="card-icon">
-				<p class="card-title">${country.name}</p>
+				<img src="${country.flag}" alt="${country.display_name} Flag" class="card-icon">
+				<p class="card-title">${country.display_name}</p>
 			</div>
 			<p class="card-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-		`
+			`
+		card.setAttribute('href', `/pages/${country.name}.html`)
 		cardSection.appendChild(card)
 	});
 }
