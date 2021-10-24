@@ -9,18 +9,19 @@
 
 body {
 	min-height: 100vh;
-	background-color: var(--light-blue);
+	background-color: var(--bg-color-header);
 
 }
 
 /*================ VARIABLES ================*/
 :root {
-	--bright-blue: #0099ff;
-	--strong-blue: #004481;
-	--medium-blue: #65cbfb;
-	--light-blue : #cbeaff;
+	--primary-color: #0099ff;
+	--second-color: #65cbfb;
+	--accent-color: #004481;
+	--bg-color : #cbeaff;
 	--cute-green : #1FBAE4;
 	--light-green: #6dcbe6;
+	--bg-color-header: white;
 
 	--header-height: 10rem;
 }
@@ -64,7 +65,7 @@ a {
 
 	height: var(--header-height);
 
-	background-color: var(--strong-blue);
+	background-color: var(--bg-color-header);
 }
 
 .header-logo {
@@ -85,7 +86,7 @@ a {
 .menu-item {
 	margin: 0 1rem;
 
-	color: white;
+	color: var(--accent-color);
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 2rem;
@@ -106,12 +107,11 @@ a {
 	align-items: center;
 	justify-content: center;
 
-	margin: 1rem;
 
 	height: 22rem;
 
-	background-color: var(--light-blue);
-	/* background-image: url("../../assets/images/banner.png"); */
+	background-color: var(--background-color);
+	background-image: url("../../assets/images/banner.png");
 	background-position: center;
 	background-size: cover;
 }
@@ -138,7 +138,7 @@ a {
 	
 	font-weight: 100;
 	font-size: 3.5rem;
-	color: var(--strong-blue);
+	color: var(--accent-color);
 }
 
 .main-title .span {
@@ -149,10 +149,10 @@ a {
 
 	padding: 0.7rem 0.9rem;
 
-	background-color: var(--strong-blue);
+	background-color: var(--bg-color);
 	border-radius: 0.6rem;
 	border: none;
-	color: white;
+	color: var(--accent-color);
 	
 	width: 100%;
 
@@ -192,9 +192,9 @@ a {
 
 	max-width: 10rem;
 
-	background-color: var(--strong-blue);
+	background-color: var(--bg-color);
 	border-radius: 1rem;
-	color: white;
+	color: var(--accent-color);
 	cursor: pointer;
 	font-weight: 600;
 
@@ -213,7 +213,7 @@ a {
 
 	margin-bottom: 1rem;
 
-	color: white;
+	color: var(--primary-color);
 	font-size: 2rem;
 	text-transform: uppercase;
 
@@ -244,7 +244,7 @@ a {
 
 	height: 3rem;
 
-	background-color: var(--strong-blue);
+	background-color: var(--bg-color);
 }
 
 .footer-menu {
@@ -258,4 +258,12 @@ a {
 .footer-text {
 	color: var(--cute-green);
 	align-self: flex-end;
+}
+
+.footer .menu-item {
+	color: var(--second-color);
+}
+
+.footer .menu-item:hover {
+	color: var(--cute-green);
 }
