@@ -1,10 +1,47 @@
 {% extends 'base.html' %}
 
 {% block styles %}
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='./css/country.css') }}">
 {% endblock %}
 
 
 {% block content %}
-	{{ data }}
+	<section class="flash">
+		Nota: Por el tiempo de entrenamiento y ejecución del modelo, sólo se encuentran disponibles los datos para México en la prioridad de excelencia operativa.
+	</section>
+	<section class="blocks-container grid">
+		
+		<div class="block block-full">
+			<h1 class="block-title">
+				Clusters de {{ country.display_name }} acerca de {{ priority }}
+			</h1>
+			<div class="block-content full-content">
+				<iframe class="plot" src="https://htmlpreview.github.io/?https://github.com/GabrielMissael/solution/blob/master/data/mexico/excelencia_operativa/scatter.html" ></iframe>
+			</div>
+		</div>
+
+		<div class="block block-sm">
+			<h1 class="block-title">
+				n-gramas:
+			</h1>
+			<img src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif" alt="loading" class="loading-img">
+		</div>
+
+		<div class="block block-med">
+			<h1 class="block-title">
+				Las palabras más usadas, fueron:
+			</h1>
+			<div class="block-content">
+				<img src="https://raw.githubusercontent.com/GabrielMissael/solution/master/data/mexico/excelencia_operativa/wordcloud.png" alt="wordcloud" class="loading image">
+			</div>
+		</div>
+
+		<div class="block block-square-sm">
+			<h1 class="block-title">
+				Muestra aleatoria de tweets:
+			</h1>
+			<img src="https://c.tenor.com/tEBoZu1ISJ8AAAAC/spinning-loading.gif" alt="loading" class="loading-img">
+		</div>
+	</section>
+	
 {% endblock %}

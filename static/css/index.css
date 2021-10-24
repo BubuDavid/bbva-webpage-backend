@@ -258,3 +258,13 @@ hr {
 	color: var(--light-green);
 	align-self: flex-end;
 }
+
+
+/*================ EXTRAS ================*/
+.flag-icon{
+	width: 3rem;
+}
+
+.priority-title {
+	font-size: 1rem;
+}

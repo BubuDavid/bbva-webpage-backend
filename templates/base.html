@@ -9,12 +9,24 @@
 	{% block styles %}{% endblock %}
 	
 	<!-- =================== ICON ======================= -->
-	<link rel="icon" href="../assets/images/icon_solution.png" />
+	<link rel="icon" href="{{ url_for('static', filename='./images/icon_solution.png') }}" />
 	<title>#Solution</title>
 </head>
 <body>
 
-	{% block content %}{% endblock %}
+	<!-- ===================  HEADER ======================= -->
+	<header class="header" id="header">
+		<img src="{{ url_for('static', filename='./images/logo.png') }}" alt="Logo" class="header-logo" onclick='window.location.replace("/")'>
+		<!-- <ul class="header-menu">
+			<li><a class="menu-item" href="#">PAISES</a></li>
+			<li><a class="menu-item" href="#">ESTADISTICAS</a></li>
+			<li><a class="menu-item" href="#">SOLUCIONES</a></li>
+		</ul> -->
+	</header>
+	<hr>
+
+	{% block content %}
+	{% endblock %}
 	
 		
 	<!-- =================== SCRIPTS ======================= -->

@@ -12,13 +12,9 @@
 				<div class="main-text">
 					<h1 class="main-title">
 						<span class="span">Una solución</span> <br>
-						para cada país
+						para {{ country.display_name }}
+						<img src="{{ country.flag }}" alt="{{ country.display_name }} Flag" class="flag-icon">
 					</h1>
-					<a href="#">
-						<button class="main-button">
-							<span class="span">#encuentra</span>latuya
-						</button>
-					</a>
 				</div>
 				<img src="{{ url_for('static', filename='./images/world.png') }}" alt="World" class="main-img">
 			</div>
@@ -28,11 +24,10 @@
 
 			<!-- =================== CARDS ======================= -->
 			<section class="card-container grid" id="cards">
-				{% for country in countries %}
-						<a class="card" href="/select_priority/{{ countries[country]['name'] }}">
+				{% for priority in priorities %}
+						<a class="card" href="/country/{{ country.name }}/{{ priority }}">
 							<div class="card-header">
-								<img src="{{ countries[country]['flag'] }}" alt="{{ countries[country]['display_name'] }} Flag" class="card-icon">
-								<p class="card-title">{{ countries[country]['display_name'] }} </p>
+								<p class="priority-title">{{ priority }} </p>
 							</div>
 						</a>
 				{% endfor %}
