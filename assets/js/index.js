@@ -2,14 +2,16 @@
 const cardSection = document.getElementById('cards')
 
 async function getCountries(apiURL) {
-	const response = await fetch(apiURL)
-	const country_list = await response.json()
-	return country_list
+	const response = await fetch(apiURL, {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+	})
+	return response.json()
 }
 
 async function createCards(apiURL) {
-	countriesInfo = await getCountries(apiURL)
-	
+	responseJson = await getCountries(apiURL)
+	countriesInfo = responseJson.countries
 	countriesInfo.forEach(country => {
 		card = document.createElement('div')
 		card.className = "card"
@@ -24,4 +26,4 @@ async function createCards(apiURL) {
 	});
 }
 
-createCards('http://localhost:3000/countries')
+createCards('http://18.116.247.11:5000/')
